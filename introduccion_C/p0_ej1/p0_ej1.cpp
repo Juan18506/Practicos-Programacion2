@@ -1,8 +1,7 @@
 #include <stdio.h>
 
-int PromClase(int cal1, int cal2, int cal3, int cal4, int cal5)
-{
-  int menorCalificacion = cal1;
+float PromClase(float cal1, float cal2, float cal3, float cal4, float cal5) {
+  float menorCalificacion = cal1;
   if (cal2 < menorCalificacion)
     menorCalificacion = cal2;
   if (cal3 < menorCalificacion)
@@ -15,11 +14,10 @@ int PromClase(int cal1, int cal2, int cal3, int cal4, int cal5)
   return (cal1 + cal2 + cal3 + cal4 + cal5 - menorCalificacion) / 4;
 }
 
-int main(int argc, char const *argv[])
-{
-  int cal1, cal2, cal3, cal4, cal5;
+int main(int argc, char const *argv[]) {
+  float cal1, cal2, cal3, cal4, cal5;
   printf("Put the five califications: ");
-  scanf("%d %d %d %d %d", &cal1, &cal2, &cal3, &cal4, &cal5);
-  printf("El promedio de la clase es: %d \n", PromClase(cal1, cal2, cal3, cal4, cal5));
+  scanf("%f %f %f %f %f", &cal1, &cal2, &cal3, &cal4, &cal5);
+  printf("El promedio de la clase es: %.2f \n", PromClase(cal1, cal2, cal3, cal4, cal5));
   return 0;
 }
